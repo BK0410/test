@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MsalService } from '@azure/msal-angular';
+import { AuthService } from '../services/auth/auth.service';
+import { RoomService } from '../services/room/room.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +10,37 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  rooms: any = [];
 
-  constructor() {}
+  constructor(
+    private roomService: RoomService,
+    private authService: AuthService,
+    private msalService: MsalService,
+    private router: Router
+  ) {}
 
+  ngOnInit() {
+    this.router.navigate(['book-room']);
+    if (localStorage.getItem('idToken') != null) {
+      this.isUserLoggedIn = true;
+    } else {
+      this.isUserLoggedIn = false;
+    }
+    console.log(this.isUserLoggedIn);
+
+    this.roomService.fetchAllRooms();
+    this.roomService.roomSubject.subscribe((data) => {
+      this.rooms = data;
+      alert(this.rooms.length);
+    });
+
+    // alert(this.rooms.content[0]);
+  }
+
+  public users: any;
+  public isUserLoggedIn: boolean;
+
+  public logout(): void {
+    this.authService.logout();
+  }
 }

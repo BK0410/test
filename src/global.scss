@@ -11,12 +11,13 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
+@import "/src/styles/common/all";
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +25,86 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+span.ngx-slider-span.ngx-slider-bubble {
+  bottom: -2.5rem !important;
+  font-size: 0.5rem !important;
+}
+
+span.ngx-slider-span.ngx-slider-pointer.ngx-slider-pointer-min {
+  display: none !important;
+}
+
+.ngx-slider .ngx-slider-bar-wrapper {
+  padding-top: 0 !important;
+  margin-top: -2.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.ngx-slider .ngx-slider-bar {
+  height: 4rem !important;
+}
+
+.ngx-slider .ngx-slider-bar {
+  background-color: $light-white !important;
+}
+
+.ngx-slider .ngx-slider-selection {
+  background-color: $icon-grey !important;
+}
+
+.ngx-slider .ngx-slider-pointer {
+  background-color: transparent !important;
+  // top: -1.5rem !important;
+  border-radius: 0 !important;
+  height: 1rem !important;
+  width: 0.2rem !important;
+
+  &.ngx-slider-active::after {
+    background-color: $light-white !important;
+  }
+}
+
+.ngx-slider .ngx-slider-pointer:after {
+  left: -0.4rem !important;
+  top: -0.3rem !important;
+  height: 1.5rem !important;
+  width: 0.15rem !important;
+}
+
+.ngx-slider-inner-tooltip {
+  display: none !important;
+}
+
+span.ngx-slider-tick {
+  border: none;
+  border-left: 0.01rem dotted black;
+  width: 0.01rem !important;
+  height: 1.5rem !important;
+  margin-left: 0 !important;
+  top: -20px !important;
+  border-radius: 0 !important;
+  background-color: $light-white !important;
+}
+
+.ngx-slider .ngx-slider-tick:first-child {
+  display: none !important;
+}
+
+.ngx-slider .ngx-slider-tick:last-child {
+  display: none !important;
+}
+
+.ngx-slider .ngx-slider-tick:nth-child(odd) {
+  height: 3rem !important;
+  top: -22px !important;
+}
+
+.ngx-slider .ngx-slider-tick:nth-child(even) {
+  top: 0.1rem !important;
+}

@@ -1,0 +1,196 @@
+@import "../../../styles/common/all";
+
+ion-content {
+  --background: #ffffff;
+}
+
+ion-title {
+  padding-top: 1em;
+  text-align: center;
+  background-color: $white;
+}
+
+.subtitle {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  width: 80%;
+}
+.backicon {
+  padding-top: 0.1rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+  font-size: 1.2em;
+  color: $primary-color;
+}
+
+.subtitle h3 {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: black;
+}
+
+ion-card {
+  position: relative;
+  background-color: $white;
+  box-shadow: none;
+  padding: 0% 7% 0% 7%;
+  height: 12em;
+}
+.centered {
+  font-size: 0.8em;
+  color: black;
+  padding-left: 1em;
+  background-color: white;
+  opacity: 0.9;
+  width: 86%;
+  height: 65%;
+  position: absolute;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.roomname_location {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 2em;
+  padding: 4% 3% 4% 3%;
+}
+.location {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.amenities {
+  margin-top: 0.9em;
+}
+li {
+  float: left;
+  margin-left: 3%;
+}
+.logo img {
+  max-width: 30%;
+}
+.capacity_cost_credit {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  padding-left: 3%;
+}
+.capacity {
+  display: grid;
+  grid-template-columns: 10% 80%;
+  grid-gap: 0.5em;
+}
+.cost {
+  color: grey;
+  display: grid;
+  grid-template-columns: 10% 80%;
+  grid-gap: 1.5em;
+}
+ion-card-content {
+  padding-top: 6%;
+}
+.info {
+  margin: 0% 10% 0% 10%;
+  line-height: 1.8em;
+  font-size: 0.8em;
+}
+.info span {
+  color: $secondary-color;
+}
+
+.booking-timeline-slot {
+  margin: 0% 10% 0% 10%;
+  margin-top: 0.7rem;
+  margin-bottom: 2%;
+  .booking-timeline {
+    height: 5rem;
+    .timings {
+      margin-top: 0.2rem;
+      display: flex;
+      font-size: 0.8rem;
+      bottom: 0;
+      p {
+        margin-right: 0.2rem;
+        color: $light-grey;
+        &:first-child {
+          margin-left: -0.8rem;
+        }
+      }
+    }
+  }
+}
+
+.meetingschedule {
+  margin: 0% 10% 5% 10%;
+}
+.to,
+.from,
+.date {
+  display: grid;
+  grid-template-columns: 10% 20% 70%;
+  margin-bottom: 0.6rem;
+}
+
+.to span,
+.from span,
+.date span {
+  color: $light-grey;
+  margin-top: 30%;
+}
+
+.datetitle,
+.fromtitle,
+.totitle {
+  margin-top: 15%;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(62%) sepia(53%) saturate(7449%) hue-rotate(165deg)
+    brightness(101%) contrast(101%);
+  opacity: 1;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+input {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.1em;
+  -webkit-box-shadow: 0 0 3px 1px rgb(228, 228, 228);
+  -moz-box-shadow: 0 0 3px 1px lightgrey;
+  box-shadow: 0 0 3px 1px rgb(232, 231, 231);
+}
+input:focus {
+  outline: 0.5px solid $primary-color;
+}
+.border-line {
+  background: $border-grey;
+  position: relative;
+  height: 0.3rem;
+}
+.border-line:before {
+  content: "";
+  background: rgb(51, 160, 254);
+  width: 50%;
+  height: 0.3rem;
+  position: absolute;
+}
+.submit {
+  text-align: center;
+}
+.submit span {
+  color: $primary-color;
+  font-weight: 500;
+}
+
+ion-button {
+  --box-shadow: none;
+  margin: 5% 7.5% 5% 7.5%;
+  height: 3.5em;
+}

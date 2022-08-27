@@ -1,0 +1,130 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <div class="logo"><img src="{{ logo }}" alt="" /></div>
+    </ion-title>
+    <div class="subtitle">
+      <div class="backicon">
+        <h3>
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </h3>
+      </div>
+      <div class="backsubtitle">
+        <h3>Book Room</h3>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-border">
+  <ion-card>
+    <div class="roomimage">
+      <img src="{{carouselImg2}}" />
+    </div>
+    <div class="centered">
+      <div class="roomname_location">
+        <div class="roomname"><strong>Asgard</strong></div>
+        <div class="location">
+          <div class="locationicon">
+            <span class="material-symbols-outlined">
+              location_on
+            </span>
+          </div>
+          <div class="place"><strong>Chennai, </strong>TamilNadu, India</div>
+        </div>
+      </div>
+      <div class="capacity_cost_credit">
+        <div class="capacity">
+          <div class="capacityicon">
+            <span class="material-symbols-outlined"> door_front </span>
+          </div>
+          <div class="seatcapacity">
+            5 seats capacity
+          </div>
+        </div>
+
+        <div class="cost">
+          <div class="costicon">
+            <ion-icon name="card-outline" style="color: grey;font-size:larger"></ion-icon>
+          </div>
+          <div class="costtitle">
+            Cost
+          </div>
+        </div>
+
+        <div class="credit">
+          Credit 2
+        </div>
+      </div>
+      <div class="amenities">
+        <li>Whiteboard&nbsp;</li>
+        <li>TV&nbsp;</li>
+        <li>5 seats capacity&nbsp;</li>
+      </div>
+    </div>
+  </ion-card>
+
+  <div class="info">
+    <span>Open from 1 PM to 4 PM</span><br>You may modify or cancel this booking upto 60 minutes before the meeting
+    starts.
+  </div>
+
+  <div class="booking-timeline-slot">
+    <div class="booking-timeline">
+      <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" (valueChange)="onValueChange($event)"
+        (highValueChange)="onHighValueChange($event)"></ngx-slider>
+    </div>
+  </div>
+
+  <div class="meetingschedule">
+    <div class="date">
+      <div class="dateicon">
+        <span class="material-symbols-outlined" style="color: lightgrey;">
+          calendar_today
+        </span>
+      </div>
+      <div class="datetitle">
+        <span>Date</span>
+      </div>
+      <div class="dateinput">
+        <input type="date" placeholder="dd-mm-yyyy">
+      </div>
+    </div>
+    <div class="timerange">
+      <div class="from">
+        <div class="fromicon">
+          <span class="material-symbols-outlined" style="color: lightgrey;">
+            schedule
+          </span>
+        </div>
+        <div class="fromtitle">
+          <span>From</span>
+        </div>
+        <div class="fromtime">
+          <input type="text">
+        </div>
+      </div>
+      <div class="to">
+        <div class="toicon">
+          <span class="material-symbols-outlined" style="color: lightgrey;">
+            schedule
+          </span>
+        </div>
+        <div class="totitle">
+          <span>To</span>
+        </div>
+        <div class="totime">
+          <input type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-line">
+    <hr>
+  </div>
+  <div class="submit">
+    <ion-button expand="block" color="secondary">SAVE AND NEXT</ion-button>
+    <span>CANCEL</span>
+  </div>
+
+</ion-content>
